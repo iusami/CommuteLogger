@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "et38ZTLdsisa8nBm0UxWD0kMnj243GOby6E/WnGpD/RnknrruM0JcfutzY7L405m9p445ZLKEF6fxNQ2pFNJeA==",
+  "success": true,
+  "projectFilePath": "/Users/usamiippei/Projects/CommuteLogger/CommuteLogger/CommuteLogger.csproj",
+  "expectedPackageFiles": [
+    "/Users/usamiippei/.nuget/packages/pcsc/6.1.3/pcsc.6.1.3.nupkg.sha512",
+    "/Users/usamiippei/.nuget/packages/pcsc.iso7816/6.1.3/pcsc.iso7816.6.1.3.nupkg.sha512",
+    "/Users/usamiippei/.nuget/packages/pcsc.reactive/6.1.3/pcsc.reactive.6.1.3.nupkg.sha512",
+    "/Users/usamiippei/.nuget/packages/system.reactive/5.0.0/system.reactive.5.0.0.nupkg.sha512",
+    "/Users/usamiippei/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.16/microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512",
+    "/Users/usamiippei/.nuget/packages/microsoft.netcore.app.host.osx-x64/6.0.16/microsoft.netcore.app.host.osx-x64.6.0.16.nupkg.sha512",
+    "/Users/usamiippei/.nuget/packages/microsoft.netcore.app.ref/6.0.16/microsoft.netcore.app.ref.6.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}
