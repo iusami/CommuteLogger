@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Reflection.Metadata;
 using Microsoft.AspNetCore.Components;
 using PCSC;
+using PCSC.Iso7816;
+using PCSC.Exceptions;
 
 namespace CommuteLogger.Components;
 
@@ -13,16 +16,27 @@ public partial class SmartCardModel
 
     public void ListupReaders()
     {
-        var contextFactory = ContextFactory.Instance;
-        var context = contextFactory.Establish(SCardScope.System);
-        
-        Console.WriteLine("Currently connected readers: ");
-        readerNames = context.GetReaders();
-        foreach (var readerName in readerNames)
+        try
         {
-            Console.WriteLine("\t" + readerName);
+            var contextFactory = ContextFactory.Instance;
+            using var context = contextFactory.Establish(SCardScope.User);
+
+            Console.WriteLine("Currently connected readers: ");
+            readerNames = context.GetReaders();
+            foreach (var readerName in readerNames)
+            {
+                Console.WriteLine("\t" + readerName);
+            }
+            ChangeReaderNames.InvokeAsync(this.readerNames);
         }
-        ChangeReaderNames.InvokeAsync(this.readerNames);
+        catch (PCSCException ex)
+        {
+            Console.WriteLine("PCSCException: " + ex.Message);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Exception: " + ex.Message);
+        }
         
     }
 }
